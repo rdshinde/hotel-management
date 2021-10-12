@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Hotel Management | Counter</title>
+  </head>
+  <body>
+    <div class="whole-page">
+      <header class="h-30 w-full text-white flex">
+        <figure
+          class="
+            logo
+            -ml-12
+            w-1/5
+            p-2
+            flex
+            items-center
+            justify-center
+            relative
+          "
+        >
+          <a href="/public/index.html"
+            ><img
+              class="w-24 h-20 object-contain"
+              src="https://cdn.pixabay.com/photo/2018/04/18/15/02/flowers-3330643__480.png"
+              alt="Logo Image"
+          /></a>
+          <figcaption class="text-gray-800 font-bold absolute -right-2">
+            <h1>Butterfly Restaurant</h1>
+          </figcaption>
+        </figure>
+        <nav
+          class="
+            navbar
+            flex
+            items-center
+            text-gray-600
+            font-bold
+            flex-1
+            p-2
+            ml-5
+            justify-evenly
+            ml-60
+          "
+        >
+          <h2 class="hover:text-gray-900">
+            <a href="/public/index.html"> Home</a>
+          </h2>
+          <h2 class="hover:text-gray-900"><a href=""> Counter</a></h2>
+          <h2 class="hover:text-gray-900"><a href=""> History</a></h2>
+          <h2 class="hover:text-gray-900"><a href=""> Admin</a></h2>
+        </nav>
+      </header>
+      <main>
+        <section
+          class="
+            bg-gradient-to-r
+            from-yellow-400
+            via-red-500
+            to-pink-500
+            table-holder
+            w-4/5
+            m-auto
+            mt-10
+            h-full
+            bg-gray-100
+            border border-gray-700
+            rounded-xl
+            flex
+            items-center
+            justify-center
+            flex-wrap
+          "
+        >
+          <div
+            class="
+              create-table
+              flex
+              items-center
+              justify-center
+              w-72
+              h-96
+              bg-white
+              m-10
+              p-5
+              rounded-lg
+            "
+          >
+            <div class="add-button flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="
+                  h-12
+                  w-12
+                  cursor-pointer
+                  text-gray-200
+                  hover:text-gray-500
+                "
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="
+              create-table
+              flex
+              items-center
+              justify-center
+              w-72
+              h-96
+              bg-white
+              m-10
+              p-5
+              rounded-lg
+              relative
+              flex
+            "
+          >
+            <div class="table-name absolute flex items-center left-2 top-5">
+              <input
+                type="text"
+                placeholder="Table Name"
+                class="w-60 p-2 focus:outline-none border-b-2 border-gray-700"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 ml-2 cursor-pointer"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                />
+              </svg>
+            </div>
+            <div class="search-item absolute top-20 left-2 ">
+              
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Scripts -->
+    
+  </body>
+</html>
