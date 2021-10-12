@@ -90,13 +90,14 @@
             flex-wrap
           "
         >
+          <!-- Add table button -->
           <div
             class="
-              create-table
+              add-table
               flex
               items-center
               justify-center
-              w-72
+              w-96
               h-96
               bg-white
               m-10
@@ -127,13 +128,14 @@
               </svg>
             </div>
           </div>
+          <!-- table created here  -->
           <div
             class="
               create-table
               flex
               items-center
               justify-center
-              w-72
+              w-96
               h-96
               bg-white
               m-10
@@ -141,97 +143,520 @@
               rounded-lg
               relative
               flex
+              overflow-scroll
             "
           >
-          <div class="delete-table absolute top-1 right-1 mb-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-200 hover:text-gray-600 cursor-pointer"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-            <div class="table-name absolute flex items-center left-2 top-2">
-              <input
-                type="text"
-                placeholder="Table Name"
-                class="w-28 p-2 focus:outline-none border-b-2 border-gray-700"
-              />
+            <div class="delete-table absolute top-1 right-1 mb-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-2 cursor-pointer"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                class="h-5 w-5 text-gray-200 hover:text-gray-600 cursor-pointer"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd"
                 />
               </svg>
             </div>
-            <div
-              class="
-                search-item
-                absolute
-                top-20
-                left-2
-                text-gray-500
-                flex
-                items-center
-                justify-center
-              "
-            >
-              <input
-                placeholder="Biryani"
-                list="brow"
-                class="focus:outline-none w-24 border-b-2 border-gray-700 p-2"
-              />
-              <datalist id="brow">
-                <option value="Biryani"></option>
-                <option value="Veg-Biryani"></option>
-                <option value="Chicken"></option>
-                <option value="Pav-bhaji"></option>
-                <option value="Puran-Poli"></option>
-              </datalist>
-
-              <div class="item-quantity flex items-center justify-center ml-2">
+            <div class="name-and-item-search">
+              <div class="table-name absolute flex items-center left-2 top-2">
+                <input
+                  type="text"
+                  placeholder="Table Name"
+                  class="w-28 p-2 focus:outline-none border-b-2 border-gray-700"
+                />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 cursor-pointer"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
+                  class="h-4 w-4 ml-2 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                    clip-rule="evenodd"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
                   />
                 </svg>
-                <span class="p-2">01</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 cursor-pointer"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
+              </div>
+              <div
+                class="
+                  search-item
+                  absolute
+                  top-14
+                  left-2
+                  text-gray-500
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <input
+                  placeholder="Biryani"
+                  list="brow"
+                  class="focus:outline-none w-40 border-b-2 border-gray-700 p-2"
+                />
+                <datalist id="brow">
+                  <option value="Biryani"></option>
+                  <option value="Veg-Biryani"></option>
+                  <option value="Chicken"></option>
+                  <option value="Pav-bhaji"></option>
+                  <option value="Puran-Poli"></option>
+                </datalist>
+                <button
+                  class="
+                    w-full
+                    h-10
+                    rounded-xl
+                    bg-blue-500
+                    ml-2
+                    p-2
+                    text-white
+                    hover:bg-blue-700
+                    cursor-pointer
+                  "
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                
+                  Add Item
+                </button>
               </div>
             </div>
+            <!-- Items comes here -->
+            <section
+              class="
+                items
+                flex flex-wrap
+                items-center
+                absolute
+                top-28
+                h-96
+                justify-center
+                overflow-scroll
+              "
+            >
+              <!-- Item -->
+              <div
+                class="
+                  item
+                  w-auto
+                  flex
+                  items-center
+                  border
+                  rounded-lg
+                  p-1
+                  font-bold
+                  mt-4
+                "
+              >
+                <div class="item-name flex w-28">
+                  <h3 class="truncate">Veg-Biryani</h3>
+                </div>
+                <div
+                  class="item-quantity flex items-center justify-center ml-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="item-quantity-number p-2">01</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="item-price ml-5 p-1">
+                  <span> &#8377; 190 </span>
+                </div>
+                <div class="delete-item">
+                  <svg
+                    name="Delete Item"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      text-gray-400
+                      hover:text-gray-600
+                      cursor-pointer
+                      ml-5
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- Item -->
+              <div
+                class="
+                  item
+                  w-auto
+                  flex
+                  items-center
+                  border
+                  rounded-lg
+                  p-1
+                  font-bold
+                  mt-4
+                "
+              >
+                <div class="item-name flex w-28">
+                  <h3 class="truncate">Veg-Biryani</h3>
+                </div>
+                <div
+                  class="item-quantity flex items-center justify-center ml-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="item-quantity-number p-2">01</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="item-price ml-5 p-1">
+                  <span> &#8377; 190 </span>
+                </div>
+                <div class="delete-item">
+                  <svg
+                    name="Delete Item"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      text-gray-400
+                      hover:text-gray-600
+                      cursor-pointer
+                      ml-5
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- Item -->
+              <div
+                class="
+                  item
+                  w-auto
+                  flex
+                  items-center
+                  border
+                  rounded-lg
+                  p-1
+                  font-bold
+                  mt-4
+                "
+              >
+                <div class="item-name flex w-28">
+                  <h3 class="truncate">Veg-Biryani</h3>
+                </div>
+                <div
+                  class="item-quantity flex items-center justify-center ml-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="item-quantity-number p-2">01</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="item-price ml-5 p-1">
+                  <span> &#8377; 190 </span>
+                </div>
+                <div class="delete-item">
+                  <svg
+                    name="Delete Item"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      text-gray-400
+                      hover:text-gray-600
+                      cursor-pointer
+                      ml-5
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- Item -->
+              <div
+                class="
+                  item
+                  w-auto
+                  flex
+                  items-center
+                  border
+                  rounded-lg
+                  p-1
+                  font-bold
+                  mt-4
+                "
+              >
+                <div class="item-name flex w-28">
+                  <h3 class="truncate">Veg-Biryani</h3>
+                </div>
+                <div
+                  class="item-quantity flex items-center justify-center ml-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="item-quantity-number p-2">01</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="item-price ml-5 p-1">
+                  <span> &#8377; 190 </span>
+                </div>
+                <div class="delete-item">
+                  <svg
+                    name="Delete Item"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      text-gray-400
+                      hover:text-gray-600
+                      cursor-pointer
+                      ml-5
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- Item -->
+              <div
+                class="
+                  item
+                  w-auto
+                  flex
+                  items-center
+                  border
+                  rounded-lg
+                  p-1
+                  font-bold
+                  mt-4
+                "
+              >
+                <div class="item-name flex w-28">
+                  <h3 class="truncate">Veg-Biryani</h3>
+                </div>
+                <div
+                  class="item-quantity flex items-center justify-center ml-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="item-quantity-number p-2">01</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-400
+                      hover:text-gray-600
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="item-price ml-5 p-1">
+                  <span> &#8377; 190 </span>
+                </div>
+                <div class="delete-item">
+                  <svg
+                    name="Delete Item"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="
+                      h-4
+                      w-4
+                      text-gray-400
+                      hover:text-gray-600
+                      cursor-pointer
+                      ml-5
+                    "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
       </main>
