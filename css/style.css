@@ -1,0 +1,9 @@
+input {-webkit-appearance: none; box-shadow: none !important; }
+:-webkit-autofill { color: #fff !important; }
+
+datalist {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
