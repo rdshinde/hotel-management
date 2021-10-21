@@ -6,9 +6,10 @@ datalist {
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
+    
 }
 .truncate {
-    width: 250px;
+   width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,4 +29,12 @@ datalist {
 }
 .table-name-input:disabled{
     background-color: #fff;
+}
+.search-list-input{
+    padding: 5px;
+    border-bottom: 2px solid rgb(190, 190, 190);
+}
+.search-list-input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(190, 190, 190);
 }

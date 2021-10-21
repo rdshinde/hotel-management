@@ -86,7 +86,7 @@
                 bg-yellow-600
               "
             >
-            <!-- div for add symbol in create table box -->
+              <!-- div for add symbol in create table box -->
               <div class="add-table-symbol text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +108,7 @@
                 </svg>
               </div>
             </div>
+            <!-- div for actual table -->
             <div
               class="
                 table
@@ -119,13 +120,33 @@
                 shadow-2xl
               "
             >
+              <!-- div for table name in table -->
               <div class="name flex items-center justify-center m-2 p-2">
-                <input value="Table No. 01" disabled type="text" class="table-name-input font-bold cursor-pointer border-gray-600 text-xl text-yellow-600">
-                <!-- <h3 class="text-xl font-bold text-yellow-600">Table No. 01</h3> -->
-                <div class="edit-btn ml-auto mr-1 flex justify-center items-center ">
+                <input
+                  value="Table No. 01"
+                  disabled
+                  type="text"
+                  class="
+                    table-name-input
+                    font-bold
+                    cursor-pointer
+                    border-gray-600
+                    text-xl text-yellow-600
+                  "
+                />
+                <!-- div for edit pencil button -->
+                <div
+                  class="edit-btn ml-auto mr-1 flex justify-center items-center"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 cursor-pointer text-gray-600 hover:text-gray-900"
+                    class="
+                      h-4
+                      w-4
+                      cursor-pointer
+                      text-gray-600
+                      hover:text-gray-900
+                    "
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -135,7 +156,224 @@
                   </svg>
                 </div>
               </div>
+              <!-- div for adding items -->
+              <div class="add-items flex items-center justify-evenly">
+                <div class="search-list m-5">
+                  <input
+                    placeholder="Biryani"
+                    list="food-items-list"
+                    class="
+                      cursor-pointer
+                      search-list-input
+                      placeholder-gray-700 placeholder-text-lg
+                      font-bold
+                    "
+                  />
+                  <datalist id="food-items-list">
+                    <option value="Biryani"></option>
+                    <option value="Veg-Biryani"></option>
+                    <option value="Chicken"></option>
+                    <option value="Pav-bhaji"></option>
+                    <option value="Puran-Poli"></option>
+                  </datalist>
+                </div>
+                <!-- add item button infront of search list -->
+                <div
+                  class="
+                    add-item-btn-div
+                    flex
+                    items-center
+                    justify-center
+                    ml-auto
+                    mr-4
+                  "
+                >
+                  <button
+                    class="
+                      add-item-btn
+                      flex
+                      w-auto
+                      h-8
+                      rounded-2xl
+                      bg-yellow-500
+                      cursor-pointer
+                      hover:bg-yellow-600
+                      p-2
+                      items-center
+                      justify-center
+                      text-white
+                    "
+                  >
+                    Add Item
+                  </button>
+                </div>
+              </div>
+              <section
+                class="added-items-in-table"
+              >
+                <!-- Actual added item div -->
+                <div class="item m-5 flex items-center justify-center">
+                  <div class="item-name">
+                    <h4 class="truncate font-bold text-gray-600">Kadhi</h4>
+                  </div>
+                  <div class="edit-quantity flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-5
+                        w-5
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        mr-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="quantity"> 01 </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-5
+                        w-5
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        ml-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div class="item-price ml-5">
+                    <h4 class="font-bold text-gray-600">&#8377; 1999</h4>
+                  </div>
+                  <div
+                    class="
+                      delete-item
+                      ml-6
+                      mr-1
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-4
+                        w-4
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        ml-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- first item ends here -->
+                <div class="item m-5 flex items-center justify-center">
+                  <div class="item-name">
+                    <h4 class="truncate font-bold text-gray-600">Kadhi</h4>
+                  </div>
+                  <div class="edit-quantity flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-5
+                        w-5
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        mr-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="quantity"> 01 </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-5
+                        w-5
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        ml-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div class="item-price ml-5">
+                    <h4 class="font-bold text-gray-600">&#8377; 1999</h4>
+                  </div>
+                  <div
+                    class="
+                      delete-item
+                      ml-6
+                      mr-1
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="
+                        h-4
+                        w-4
+                        text-gray-400
+                        cursor-pointer
+                        hover:text-gray-600
+                        ml-1
+                      "
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </section>
             </div>
+            <!-- first table ends here -->
           </section>
         </section>
       </main>
@@ -143,10 +381,10 @@
     <!-- Scripts -->
     <script src="/src/counter.js"></script>
     <script>
-      function editName(){
-        const editBtn = document.querySelector('.edit-btn');
-        const editNameInput = document.querySelector('.table-name-input');
-        editBtn.addEventListener('click',function(){
+      function editName() {
+        const editBtn = document.querySelector(".edit-btn");
+        const editNameInput = document.querySelector(".table-name-input");
+        editBtn.addEventListener("click", function () {
           editNameInput.disabled = false;
           editNameInput.focus();
         });
