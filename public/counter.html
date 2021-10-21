@@ -120,8 +120,8 @@
               "
             >
               <div class="name flex items-center justify-center m-2 p-2">
-                <!-- <input placeholder="Table No. 01" type="text" class="focus:border-blue-500 focus:outline-none font-bold border-gray-600 text-xl text-yellow-600"> -->
-                <h3 class="text-xl font-bold text-yellow-600">Table No. 01</h3>
+                <input value="Table No. 01" disabled type="text" class="table-name-input font-bold cursor-pointer border-gray-600 text-xl text-yellow-600">
+                <!-- <h3 class="text-xl font-bold text-yellow-600">Table No. 01</h3> -->
                 <div class="edit-btn ml-auto mr-1 flex justify-center items-center ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -142,5 +142,16 @@
     </div>
     <!-- Scripts -->
     <script src="/src/counter.js"></script>
+    <script>
+      function editName(){
+        const editBtn = document.querySelector('.edit-btn');
+        const editNameInput = document.querySelector('.table-name-input');
+        editBtn.addEventListener('click',function(){
+          editNameInput.disabled = false;
+          editNameInput.focus();
+        });
+      }
+      editName();
+    </script>
   </body>
 </html>

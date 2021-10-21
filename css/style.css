@@ -22,3 +22,10 @@ datalist {
     height: 60vh;
     width: 30%;
 }
+.table-name-input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(190, 190, 190);
+}
+.table-name-input:disabled{
+    background-color: #fff;
+}
