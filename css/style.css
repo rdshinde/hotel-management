@@ -13,3 +13,12 @@ datalist {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+.create-table{
+    height: 60vh;
+    width: 30%;
+}
+.table{
+    height: 60vh;
+    width: 30%;
+}
